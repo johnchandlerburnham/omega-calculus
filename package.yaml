@@ -1,0 +1,58 @@
+name:                omega-calculus
+version:             0.1.0.0
+github:              "johnchandlerburnham/omega-calculus"
+license:             AGPL3
+author:              "John C. Burnham"
+maintainer:          "jcb@johnchandlerburnham.com"
+copyright:           "2020 John Burnham"
+
+
+
+extra-source-files:
+- README.md
+- LICENSE
+
+
+description:         Please see the README on GitHub at <https://github.com/johnchandlerburnham/omega-calculus#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  exposed-modules:
+#    - Net
+#    - Lambda
+    - Omega
+
+  dependencies:
+    - megaparsec
+    - containers
+    - transformers
+    - mtl
+    - text
+
+  default-extensions:
+    - OverloadedStrings
+
+#executables:
+#  oide:
+#    main:                Main.hs
+#    source-dirs:         oide
+#    ghc-options:
+#    - -threaded
+#    - -rtsopts
+#    - -with-rtsopts=-N
+#    dependencies:
+#    - omega-calculus
+
+#tests:
+#  omega-calculus-test:
+#    main:                Spec.hs
+#    source-dirs:         test
+#    ghc-options:
+#    - -threaded
+#    - -rtsopts
+#    - -with-rtsopts=-N
+#    dependencies:
+#    - omega-calculus
