@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ed653ec17ccd24596a7c64c1aed360d5abfa1dcf254bfb7b2cc1866c5aecb7fc
+-- hash: 97823cea66b187422dadb2b56166bb0b3975916a2fa47244abcc71d8f4f2470d
 
 name:           omega-calculus
 version:        0.1.0.0
@@ -13,13 +13,13 @@ homepage:       https://github.com/johnchandlerburnham/omega-calculus#readme
 bug-reports:    https://github.com/johnchandlerburnham/omega-calculus/issues
 author:         John C. Burnham
 maintainer:     jcb@johnchandlerburnham.com
-copyright:      2019 John Burnham
-license:        BSD3
+copyright:      2020 John Burnham
+license:        AGPL-3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
+    LICENSE
 
 source-repository head
   type: git
@@ -28,9 +28,9 @@ source-repository head
 library
   exposed-modules:
       Net
-      Lambda
       Omega
   other-modules:
+      Lambda
       Paths_omega_calculus
   hs-source-dirs:
       src
@@ -42,16 +42,5 @@ library
     , mtl
     , text
     , transformers
-  default-language: Haskell2010
-
-executable oide
-  main-is: Main.hs
-  other-modules:
-      Paths_omega_calculus
-  hs-source-dirs:
-      oide
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , omega-calculus
+    , vector
   default-language: Haskell2010
